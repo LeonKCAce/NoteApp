@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Note View Controller-->
+        <scene sceneID="oW2-xh-ena">
+            <objects>
+                <viewController storyboardIdentifier="noteVC" id="ZP4-MH-fw8" customClass="NoteViewController" customModule="NoteApp_1108" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ETZ-bH-2ti">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="1ju-ba-oZu">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="OKm-xB-Dbu">
+                                        <connections>
+                                            <action selector="camera:" destination="ZP4-MH-fw8" id="8Ly-vN-ILw"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fL2-io-sjI">
+                                <rect key="frame" x="10" y="30" width="300" height="274"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lxM-SB-bBq">
+                                <rect key="frame" x="10" y="314" width="300" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" placeholder="YES" id="bGO-La-RR4"/>
+                                </constraints>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="bGO-La-RR4"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1ju-ba-oZu" firstAttribute="trailing" secondItem="rJb-Jr-ADP" secondAttribute="trailing" id="4Q5-UA-1Rf"/>
+                            <constraint firstItem="rJb-Jr-ADP" firstAttribute="trailing" secondItem="lxM-SB-bBq" secondAttribute="trailing" constant="10" id="8Zd-fT-YZh"/>
+                            <constraint firstItem="fL2-io-sjI" firstAttribute="top" secondItem="rJb-Jr-ADP" secondAttribute="top" constant="10" id="CIs-fs-av4"/>
+                            <constraint firstItem="fL2-io-sjI" firstAttribute="top" secondItem="rJb-Jr-ADP" secondAttribute="top" constant="10" id="D1d-ga-7Ot"/>
+                            <constraint firstItem="lxM-SB-bBq" firstAttribute="top" secondItem="rJb-Jr-ADP" secondAttribute="top" constant="10" id="NBT-0z-29f"/>
+                            <constraint firstItem="lxM-SB-bBq" firstAttribute="leading" secondItem="rJb-Jr-ADP" secondAttribute="leading" constant="10" id="NS3-o8-xxa"/>
+                            <constraint firstItem="fL2-io-sjI" firstAttribute="leading" secondItem="rJb-Jr-ADP" secondAttribute="leading" constant="10" id="Qwn-rW-bUc"/>
+                            <constraint firstItem="rJb-Jr-ADP" firstAttribute="trailing" secondItem="fL2-io-sjI" secondAttribute="trailing" constant="10" id="Suc-Qx-Lll"/>
+                            <constraint firstItem="lxM-SB-bBq" firstAttribute="top" secondItem="fL2-io-sjI" secondAttribute="bottom" constant="10" id="TrV-ud-b5C"/>
+                            <constraint firstItem="rJb-Jr-ADP" firstAttribute="trailing" secondItem="lxM-SB-bBq" secondAttribute="trailing" constant="10" id="Ztt-Yo-6ZM"/>
+                            <constraint firstItem="1ju-ba-oZu" firstAttribute="top" secondItem="lxM-SB-bBq" secondAttribute="bottom" constant="10" id="brB-ep-WhI"/>
+                            <constraint firstItem="lxM-SB-bBq" firstAttribute="leading" secondItem="fL2-io-sjI" secondAttribute="trailing" constant="10" id="ekZ-Ef-z3b"/>
+                            <constraint firstItem="1ju-ba-oZu" firstAttribute="bottom" secondItem="rJb-Jr-ADP" secondAttribute="bottom" id="h0g-iM-ZLc"/>
+                            <constraint firstItem="1ju-ba-oZu" firstAttribute="leading" secondItem="rJb-Jr-ADP" secondAttribute="leading" id="hcP-Kj-CzU"/>
+                            <constraint firstItem="lxM-SB-bBq" firstAttribute="width" secondItem="fL2-io-sjI" secondAttribute="width" id="qew-HH-E1F"/>
+                            <constraint firstItem="fL2-io-sjI" firstAttribute="leading" secondItem="rJb-Jr-ADP" secondAttribute="leading" constant="10" id="yAj-t6-Jj0"/>
+                            <constraint firstItem="1ju-ba-oZu" firstAttribute="top" secondItem="lxM-SB-bBq" secondAttribute="bottom" constant="10" id="yex-xN-U6S"/>
+                            <constraint firstItem="1ju-ba-oZu" firstAttribute="top" secondItem="fL2-io-sjI" secondAttribute="bottom" constant="10" id="zdw-E8-7Gk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rJb-Jr-ADP"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="8Zd-fT-YZh"/>
+                                <exclude reference="D1d-ga-7Ot"/>
+                                <exclude reference="Qwn-rW-bUc"/>
+                                <exclude reference="NBT-0z-29f"/>
+                                <exclude reference="ekZ-Ef-z3b"/>
+                                <exclude reference="qew-HH-E1F"/>
+                                <exclude reference="yex-xN-U6S"/>
+                                <exclude reference="zdw-E8-7Gk"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="8Zd-fT-YZh"/>
+                                <exclude reference="Suc-Qx-Lll"/>
+                                <exclude reference="Ztt-Yo-6ZM"/>
+                                <exclude reference="CIs-fs-av4"/>
+                                <include reference="D1d-ga-7Ot"/>
+                                <include reference="Qwn-rW-bUc"/>
+                                <exclude reference="yAj-t6-Jj0"/>
+                                <include reference="NBT-0z-29f"/>
+                                <exclude reference="NS3-o8-xxa"/>
+                                <exclude reference="TrV-ud-b5C"/>
+                                <include reference="ekZ-Ef-z3b"/>
+                                <include reference="qew-HH-E1F"/>
+                                <exclude reference="brB-ep-WhI"/>
+                                <include reference="yex-xN-U6S"/>
+                                <include reference="zdw-E8-7Gk"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="xPt-69-syp">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="SJw-aZ-Bbe">
+                            <connections>
+                                <action selector="done:" destination="ZP4-MH-fw8" id="BOA-sp-YUY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="lxM-SB-bBq" id="aK0-mT-wvJ"/>
+                        <outlet property="textView" destination="fL2-io-sjI" id="jAt-kd-RlC"/>
+                        <outlet property="toolbar" destination="1ju-ba-oZu" id="chy-3q-2cR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sRl-kn-NfZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1673.2394366197184" y="131.25"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>
